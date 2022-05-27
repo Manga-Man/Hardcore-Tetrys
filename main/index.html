@@ -1,0 +1,107 @@
+<html style="height: 540px">
+
+<head>
+    <style id="styles">
+        html,
+        body {
+            overflow-y: hidden;
+        }
+
+        body {
+            background: #222;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        *[hidden] {
+            display: none !important;
+        }
+
+        canvas {
+            display: block;
+            width: 300px;
+            height: 540px;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+
+        div.background {
+            z-index: -1;
+        }
+
+        div.black-canvas-box {
+            position: absolute;
+            width: 294px;
+            height: 534px;
+            margin: 3px;
+            box-sizing: border-box;
+            background: black;
+        }
+
+        div.red-line {
+            position: absolute;
+            top: 91px;
+            left: 3px;
+            width: 294px;
+            height: 1px;
+            background: red;
+        }
+
+        div.bmc {
+            background: black;
+            display: flex;
+            margin: 3px;
+            margin-top: 1px;
+            align-items: center;
+            padding: 2px 0;
+            user-select: none;
+            position: relative;
+        }
+
+        div.bmc img.coffee {
+            height: 35px;
+            padding: 8px 12px;
+        }
+
+        div.bmc a.text {
+            color: white;
+            font-size: 16px;
+            margin: auto 0;
+            transform: translateY(-1px);
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        div.bmc a.text span.bmc {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        div.bmc a.hide {
+            height: 100%;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        div.bmc a.hide img {
+            height: 100%;
+            padding: 4.5px;
+            box-sizing: border-box;
+        }
+
+        /*# sourceMappingURL=style.css.map */
+    </style>
+    <title>Tetrys!</title>
+</head>
+
+<body>
+    <div class="background black-canvas-box"></div>
+    <div class="background red-line"></div> <canvas id="canvas" width="450" height="810"></canvas>
+    <script src="app.js"></script>
+    <script src="bmc.js"></script>
+</body>
+
+</html>
